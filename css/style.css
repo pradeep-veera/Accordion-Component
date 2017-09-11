@@ -14,26 +14,38 @@ div#content{
 } 
 .container{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
-}
-.container .content{
-    display:none
+    justify-content: space-between;
+}    
+   
+.mobile_content{
+    display:none;
+    padding:0px 15px;
 }
 
 .container:target .content{
     display:block;
 }
-div#container_1{
+section#container_1{
     order: 1;
+    width: 100%;
+    flex-direction: column;
+    margin: 0px 5px 0px 0px;     
 }
 
-div#container_2{
+section#container_2{
     order:2;
+    width: 100%;
+    flex-direction: column;
+    margin: 0px 5px 0px 0px;     
 }
 
-div#container_3{
+section#container_3{
     order:3;
+    width: 100%;
+    flex-direction: column;
+    margin: 0px 5px 0px 0px;     
 }
 
 a.button{
@@ -53,7 +65,8 @@ a.button{
     color:#000;
 }   
 
-a.button:hover{
+a.button:hover,
+a.button:active {
     color:#fff;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.9);
 }
@@ -66,4 +79,16 @@ div.content{
 
 h1.title{
     margin: 15px 0px 5px 0px;
+}
+
+@media screen and (max-width: 768px) {
+    .container{
+        flex-wrap:wrap;
+    }
+    .mobile_content{
+        display:block;
+    }
+    .text_container{
+        display:none;
+    }    
 }
