@@ -88,7 +88,7 @@ h1.title{
     margin:0px 15px;
 }
 
-// Media quires for the devices <=768px
+/* Media quires for devices <=768 */
 @media screen and (max-width: 768px) {
     .container{
         flex-wrap:wrap;

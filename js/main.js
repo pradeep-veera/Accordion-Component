@@ -5,21 +5,24 @@ Purpose: To load the content of the static file on activating the tabs.
 */
 
 $(document).ready(function() {
-    // Check fot the width of the device
-    // Mobile device width (<= 768px)
+
     $('.button').click(function() {   
         var button = $(this);
         var status = $(this).attr('id');
 
+
+        // To make the status of the tab as active.    
         if($('.button').hasClass('active')){
             $('.button').removeClass('active'); 
             $(this).addClass('active');
         }else {
             $(this).addClass('active');
         }        
+        
 
+        // Check fot the width of the device
+        // Mobile device width (<= 768px)
         if (window.innerWidth <= 768) {
-            console.log("mobile");
             var button = $(this);
             var status = $(this).attr('id');
             // Check the button id to load the content accordingly
@@ -46,7 +49,7 @@ $(document).ready(function() {
                 $('#mobile_content_3').css('display','block');                
             }
         }else {
-                // Check the id of the tab clicked.
+             // Device width >=768px
             if(status == "button_1"){
               // Load the content of the 1st tab
                 $('.text_container div.text').load('buffer_1.html');
