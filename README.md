@@ -1,4 +1,5 @@
 # Accordion-Component
+Totally responsive and compatible to all the latest browsers.
 
 <h2>Programming Languages:</h2>
 <ul>
