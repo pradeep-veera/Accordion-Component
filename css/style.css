@@ -64,9 +64,11 @@ a.button{
     border-radius: 5px;
     color:#000;
 }   
-
+a:button{
+    color:red;
+}
 a.button:hover,
-a.button:active {
+a.button.active {
     color:#fff;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.9);
 }
@@ -81,12 +83,18 @@ h1.title{
     margin: 15px 0px 5px 0px;
 }
 
+.text_container{
+    display:block;
+    margin:0px 15px;
+}
+
+// Media quires for the devices <=768px
 @media screen and (max-width: 768px) {
     .container{
         flex-wrap:wrap;
     }
     .mobile_content{
-       // display:block;
+
     }
     .text_container{
         display:none;
